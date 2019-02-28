@@ -27,6 +27,8 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias dll='cd $TRUNK/src/toc/src/dlls/gk/directx'
     alias spirv='cd $TRUNK/src/toc/src/lib/twk2/directx/external/spirv'
 
+    ## ssh
+
     ## spirv dir
     export SPIRV=$TRUNK/src/toc/src/lib/twk2/directx/external/spirv
 
@@ -100,6 +102,9 @@ alias la='ls -A'
 alias l='ls -CF'
 alias checkport="sudo lsof -i -P | grep -i 'listen'"
 
+## SSH Settings
+alias sy='ssh root@192.168.10.110'
+
 
 ################################################################################
 ## Functions
@@ -166,27 +171,8 @@ function psColor()
     local WHITEBOLD="\[\033[1;37m\]"
 
     OS=$(uname -s)
-    if [[ $USER == "root" ]]; then
-        if [[ $OS == "Linux" ]]; then
-            export PS1="\[\e]0; \u@\h: \w\a\]$CYAN\u$CYAN@\h$YELLOW\w:#\[\e[00m\] "
-        elif [[ $OS == "Darwin" ]]; then
-            export PS1="\[\e]0; \u@\h: \w\a\]$RED\u$RED@\h$YELLOW\w:#\[\e[00m\] "
-        elif [[ $OS == "FreeBSD" ]]; then
-            export PS1="\[\e]0; \u@\h: \w\a\]$BLUE\u$BLUE@\h$YELLOW\w:#\[\e[00m\] "
-        else
-            export PS1="\[\e]0; \u@\h: \w\a\]$GREEN\u$GREEN@\h$YELLOW\w:#\[\e[00m\] "
-        fi
-    else
-        if [[ $OS == "Linux" ]]; then
-            export PS1="\[\e]0; \u@\h: \w\a\]$CYAN\u$CYAN@\h$YELLOW\w:$\[\e[00m\] "
-        elif [[ $OS == "Darwin" ]]; then
-            export PS1="\[\e]0; \u@\h: \w\a\]$RED\u$RED@\h$YELLOW\w:$\[\e[00m\] "
-        elif [[ $OS == "FreeBSD" ]]; then
-            export PS1="\[\e]0; \u@\h: \w\a\]$BLUE\u$BLUE@\h$YELLOW\w:$\[\e[00m\] "
-        else
-            export PS1="\[\e]0; \u@\h: \w\a\]$GREEN\u$GREEN@\h$YELLOW\w:$\[\e[00m\] "
-        fi
-    fi
+
+    export PS1="\[\e]0; \u@\h: \w\a\]$REDBOLD\u$CYANBOLD@\h$WHITEBOLD\w:#\[\e[00m\] "
 }
 psColor
 
