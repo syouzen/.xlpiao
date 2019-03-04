@@ -12,8 +12,8 @@ for p in ${PACKAGE[@]}; do
         sudo apt-get -y install $p
         sudo apt-get -y install clang clang-format
     elif [[ "$OSTYPE" == "darwin"* ]]; then
-        sudo brew install $p
-        sudo brew install clang
+        brew install $p
+        brew install clang
     else
         sudo pkg install $p
     fi
