@@ -24,10 +24,20 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias build='cd $TRUNK/src/toc/build'
     alias test='cd $TRUNK/src/toc/test/gk/gk1-4'
     alias lib='cd $TRUNK/src/toc/src/lib/twk2/directx'
-    alias dll='cd $TRUNK/src/toc/src/dlls/gk/directx'
+    alias dll='cd $TRUNK/src/toc/src/dlls'
     alias spirv='cd $TRUNK/src/toc/src/lib/twk2/directx/external/spirv'
-
-    ## ssh
+    alias dxvk='cd $TRUNK/src/toc/src/lib/twk2/directx/dxvk'
+    alias mesa='cd $TRUNK/third_party/mesa-17.2.2'
+    alias egl='cd $TRUNK/src/lib/graphics_infra/egl'
+    alias wsi='cd $TRUNK/src/lib/graphics_infra/wsi'
+    alias cwm='cd ~/sy/git/3D/little_cwm'
+    alias d3d='cd ~/sy/git/3D/directx_samples'
+    alias ddraw='cd $TRUNK/src/toc/src/lib/tgk2/ddraw'
+    alias twk2='cd $TRUNK/src/toc/src/lib/twk2'
+    alias tgk2='cd $TRUNK/src/toc/src/lib/tgk2'
+    alias gdi='cd $TRUNK/src/toc/src/lib/tgk2/gdi'
+    alias gdip='cd $TRUNK/src/toc/src/lib/tgk2/gdiplus'
+    alias wine='cd ~/sy/git/2D/wine'
 
     ## spirv dir
     export SPIRV=$TRUNK/src/toc/src/lib/twk2/directx/external/spirv
@@ -53,6 +63,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     export GIT=$HOME/git
     alias gl='cd $GIT/private/opengl_example'
     alias gof='cd $GIT/private/gof'
+    
+    ## SSH Settings
+    alias sy='ssh root@192.168.10.110'
 fi
 
 ################################################################################
@@ -105,9 +118,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias checkport="sudo lsof -i -P | grep -i 'listen'"
-
-## SSH Settings
-alias sy='ssh root@192.168.10.110'
 
 
 ################################################################################
@@ -176,7 +186,7 @@ function psColor()
 
     OS=$(uname -s)
 
-    export PS1="\[\e]0; \u@\h: \w\a\]$REDBOLD\u$CYANBOLD@\h$WHITEBOLD\w:#\[\e[00m\] "
+    export PS1="\[\e]0; \u@\h: \w\a\]$REDBOLD\u$CYANBOLD@\h:$WHITEBOLD\w\[\e[00m\] "
 }
 psColor
 
