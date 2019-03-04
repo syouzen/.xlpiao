@@ -49,6 +49,10 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
     # export SPIRV_Cross=$SPIRV/SPIRV-Cross
     # alias spirv-cross=$SPIRV_Cross/build/install/bin/spirv-cross
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    export GIT=$HOME/git
+    alias gl='cd $GIT/private/opengl_example'
+    alias gof='cd $GIT/private/gof'
 fi
 
 ################################################################################
