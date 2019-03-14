@@ -30,7 +30,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias mesa='cd $TRUNK/third_party/mesa-17.2.2'
     alias egl='cd $TRUNK/src/lib/graphics_infra/egl'
     alias wsi='cd $TRUNK/src/lib/graphics_infra/wsi'
-    alias cwm='cd ~/sy/git/3D/little_cwm'
+    alias cwm='cd $TRUNK/src/core/cwm'
     alias d3d='cd ~/sy/git/3D/directx_samples'
     alias ddraw='cd $TRUNK/src/toc/src/lib/tgk2/ddraw'
     alias twk2='cd $TRUNK/src/toc/src/lib/twk2'
@@ -63,6 +63,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     export GIT=$HOME/git
     alias gl='cd $GIT/private/opengl_example'
     alias gof='cd $GIT/private/gof'
+    
+    alias ogl='cd $GIT/3D/ogl'
+    alias sb='cd $GIT/3D/sb7code'
     
     ## SSH Settings
     alias sy='ssh root@192.168.10.110'
