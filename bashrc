@@ -34,10 +34,12 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias d3d='cd ~/sy/git/3D/directx_samples'
     alias ddraw='cd $TRUNK/src/toc/src/lib/tgk2/ddraw'
     alias twk2='cd $TRUNK/src/toc/src/lib/twk2'
+    alias tgk='cd $TRUNK/src/lib/tgk'
     alias tgk2='cd $TRUNK/src/toc/src/lib/tgk2'
-    alias gdi='cd $TRUNK/src/toc/src/lib/tgk2/gdi'
-    alias gdip='cd $TRUNK/src/toc/src/lib/tgk2/gdiplus'
+    alias gdi='cd $TRUNK/src/toc/src/lib/new_tgk2/gdi'
+    alias gdip='cd $TRUNK/src/toc/src/lib/new_tgk2/gdiplus'
     alias wine='cd ~/sy/git/2D/wine'
+    alias skia='cd ~/sy/git/2D/skia'
 
     ## spirv dir
     export SPIRV=$TRUNK/src/toc/src/lib/twk2/directx/external/spirv
@@ -64,8 +66,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     alias gl='cd $GIT/private/opengl_example'
     alias gof='cd $GIT/private/gof'
     
-    alias ogl='cd $GIT/3D/ogl'
-    alias sb='cd $GIT/3D/sb7code'
+    alias ogl='cd $GIT/graphics/3D/ogl'
+    alias sb='cd $GIT/graphics/3D/sb7code'
+    alias lgl='cd $GIT/graphics/3D/LearnOpenGL'
+    alias wine='cd $GIT/graphics/wine'
     
     ## SSH Settings
     alias sy='ssh root@192.168.10.110'
