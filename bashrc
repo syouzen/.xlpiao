@@ -26,12 +26,10 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias lib='cd $TRUNK/src/toc/src/lib/twk2/directx'
     alias dll='cd $TRUNK/src/toc/src/dlls'
     alias spirv='cd $TRUNK/src/toc/src/lib/twk2/directx/external/spirv'
-    alias dxvk='cd $TRUNK/src/toc/src/lib/twk2/directx/dxvk'
     alias mesa='cd $TRUNK/third_party/mesa-17.2.2'
     alias egl='cd $TRUNK/src/lib/graphics_infra/egl'
     alias wsi='cd $TRUNK/src/lib/graphics_infra/wsi'
     alias cwm='cd $TRUNK/src/core/cwm'
-    alias d3d='cd ~/sy/git/3D/directx_samples'
     alias ddraw='cd $TRUNK/src/toc/src/lib/tgk2/ddraw'
     alias twk2='cd $TRUNK/src/toc/src/lib/twk2'
     alias tgk='cd $TRUNK/src/lib/tgk'
@@ -40,6 +38,11 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias gdip='cd $TRUNK/src/toc/src/lib/new_tgk2/gdiplus'
     alias wine='cd ~/sy/git/2D/wine'
     alias skia='cd ~/sy/git/2D/skia'
+    alias t2d='cd ~/sy/git/2D/t2d'
+    alias log='cd /zone/normal/rootfs/home/tt'
+    alias dx='cd $TRUNK/src/toc/src/lib/twk2/directx'
+    alias dxvk='cd ~/sy/git/3D/dxvk'
+    alias vk9='cd ~/sy/git/3D/VK9'
 
     ## spirv dir
     export SPIRV=$TRUNK/src/toc/src/lib/twk2/directx/external/spirv
@@ -254,3 +257,5 @@ function extract()
         echo "'$1' is not a vaild file"
     fi
 }
+export CC='/usr/bin/clang-7'
+export CXX='/usr/bin/clang++-7'
