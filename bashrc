@@ -257,5 +257,5 @@ function extract()
         echo "'$1' is not a vaild file"
     fi
 }
-export CC='/usr/bin/clang-7'
-export CXX='/usr/bin/clang++-7'
+export CC='/usr/bin/clang'
+export CXX='/usr/bin/clang++'
